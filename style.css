@@ -1,0 +1,56 @@
+body {
+    background-color: rgba(83, 66, 66, 0.733);
+    margin: 0;
+    font-family: comic sans MS;
+    font-weight: 300;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.GridContainer {
+    display: grid;
+    grid-template-areas: 
+    'Header Header Header Header'
+    'Main Main Body Body'
+    'Main Main Body Body'
+    'Footer Footer Footer Footer';
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: brown;
+    border: 10px dotted;
+}
+header {
+    background:white;
+}
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+    padding: 10px 0;
+}
+nav {
+    float:right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    margin-left: 150px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    color: black;
+    
+}
+li:hover {
+    color:rgba(83, 66, 66, 0.733)
+}
+.Sak1 {
+    grid-area: Header;
+}
