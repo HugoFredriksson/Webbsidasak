@@ -48,8 +48,8 @@ nav ul {
 }
 nav li {
     display: inline-block;
-    margin-left: 150px;
-    padding-top: 90px;
+    margin-left: 110px;
+    padding-top: 27.8px;
     padding-bottom: 10px;
     color: black;
     text-align: center;
@@ -96,6 +96,15 @@ nav a {
 .homebody2 {
     background-color: rgba(83, 66, 66, 0.733);
 }
-grid-container:first-child {
+.grid-container:first-child {
     background-image: url(amog.jpg);
+}
+.border {
+    border: 5px solid;
+}
+.burger {
+    text-align: center;
+}
+.borgir {
+    font-size: 25px;
 }
