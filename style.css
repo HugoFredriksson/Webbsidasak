@@ -1,110 +1,91 @@
 body {
-    background-color: rgba(83, 66, 66, 0.733);
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    background-color: rgba(83, 66, 66, 0.733); /* bakgrunds färg till hemsidan */
+    margin: 0;          /* Distans mellan alla objekt i bodyn */
+    font-family: Arial, Helvetica, sans-serif;  /* Text stil i bodyn */
+    font-weight: 300;    /* Hur tjock eller tunn texten är */
 }
-.container {
-    width: 80%;
-    margin: 0 auto;
+.container {    /* En class med namnet container som innehåller navigations saken längst upp på skärmen */
+    width: 80%;   /* Bredden på ett element */
+    margin: 0 auto;    /* Distans mellan alla objekt i containern */
 }
-.grid-container {
-    display: grid;
-    grid-template-areas: 
-    'Header Body Body Body'
-    'Header Main Main Main'
-    'Header Main Main Main'
-    'Footer Footer Footer Footer';
-    grid-gap: 10px;
-    padding: 10px;
-    background-color:gray;
-    border: 10px dotted;
-}
-.grid-container > div {
-    background-color:rgb(88, 88, 92);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-  }
-header {
+header {   /* En tag som hanterar navbaren vilket är saken längst upp på skärmen */
     background:white;
 }
-header::after {
-    content: '';
-    display: table;
+header::after {  /* Clearfix, utan att skriva detta så försvinner min header/nav till 0px */
+    content: '';  
+    display: table;   
     clear: both;
 }
-.logo {
-    padding-top: 10px 0;
-    float: right;
+.logo {    /* Loggan längst upp åt vänster på skärmen */
+    padding-top: 10px 0;   /* 10 pixlars bredd padding från toppen av skärmen */
+    float: right;  /* Loggan ska flyta på vänster sida av containers */
 }
-nav {
-    float:right;
+nav {   /* En nav tag och i den så finns texten som man kan klicka på */
+    float:right;  /* Får texten i denna tag att flyta på vänster sida av containern som finns längst upp på sidan */  
 }
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav ul {  /*  Taggen som hanterar själva navbaren som är längst upp på skärmen */
+    margin: 0;  /* Ser till att distansen från toppen inte orsakar problem senare typ */
+    padding: 0;  /* Ser till att navbaren håller sig i rätt storlek */
+    list-style: none; /* Tar bort en punkt jämte texten som finns vanligen */
 }
-nav li {
-    display: inline-block;
-    margin-left: 110px;
-    padding-top: 27.8px;
-    padding-bottom: 10px;
-    color: black;
-    text-align: center;
+nav li {  /*Taggen som hanterar texten i navbaren */
+    display: inline-block;  /* Låter mig att hantera bredden och höjden av texten i detta fallet */
+    margin-left: 110px;  /* Distansen mellan objekten från vänster sida */
+    padding-top: 27.8px;  /* En kudde som är runt objekten  i detta fallet från toppen */
+    padding-bottom: 10px; /* Kudden som är runt objekten och i detta fallet från botten */
+    text-align: center;  /* Texten säts i mitten */
 }
-li:hover {
-    color:rgba(83, 66, 66, 0.733)
+h1 {  /* En tag med text och detta är ettan vilket betyder att den är störst och är en rubrik */
+    text-align: center;  /* Ser till att texten är i mitten */
 }
-.Sak1 {
-    grid-area: Header;
+p {   /* En text tag som används som brödtext */
+    text-align: center;  /* Ser till att texten är i mitten */
 }
-.Sak2 {
-    grid-area: Main;
+a:hover {  /* Påverkar hur saker ser ut när muspekaren är över den */
+    color: rgb(35, 134, 192); /* Färgen ändras när muspekaren är över denna text */
 }
-.Sak3 {
-    grid-area: Body;
+nav a {  /* En specifik <a> tag som finns i <nav> taggen */
+    text-transform: uppercase; /* Gör så att texten blir uppercase */
+    text-decoration: none; /* Tar bort sträcket som vanligtvis finns på botten av denna sorts text */
+    font-size: 22px; /* Storleken på texten */
 }
-.Sak4 {
-    grid-area: Footer;
-}
-h1 {
-    text-align: center;
-}
-p {
-    text-align: center;
-}
-a:hover {
-    color: rgb(35, 134, 192);
-    border: 1px dotted;
-}
-nav a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 22px;
-}
-.center {
+.mitten {  /* En generell class som jag använder på flera olika saker som sätter saken och ting i mitten av sidan */
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-.text1 {
-    color:white;
+.text1 {  /* Gör en viss text vit */
+    color:white;  /* Vit färg */
 }
-.homebody2 {
-    background-color: rgba(83, 66, 66, 0.733);
+.border {  /* En generell class som sätter en border runt omkring det objektet man väljer att sätta denna class på */
+    border: 5px solid; /* Bordern är 5 pixlar och är ett rak */
 }
-.grid-container:first-child {
-    background-image: url(amog.jpg);
+.burger {  /* En class som sätter några bilder i mitten */
+    text-align: center;  /* Gör att de är i mitten */
 }
-.border {
-    border: 5px solid;
-}
-.burger {
-    text-align: center;
-}
-.borgir {
+.borgir {  /* */
     font-size: 25px;
 }
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th.first{
+    width: 250px;
+    height: 30px;
+}
+tr.first{
+    height: 30px;
+}
+td:nth-child(2n) {
+    background-color: brown;
+}
+td:nth-child(odd) {
+    background-color: chartreuse;
+}
+th:nth-child(1n) {
+    background-color: cyan;
+}
+
+
